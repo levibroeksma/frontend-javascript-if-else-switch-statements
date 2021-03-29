@@ -2,8 +2,6 @@
 // Opdracht 1: schrijf een switch statement die op basis van de volgende variabele een bijbehorende foutmelding in de console logt.
 // ==========================================
 
-const errorCode = 0;
-
 // Je mag ervanuit gaan dat deze variabele altijd een waarde tussen de 0 en de 4 bevat. Deze codes hebben de volgende betekenissen (foutmeldingen):
 // 0: "Geen watertoevoer"
 // 1: "Temperatuur te laag"
@@ -16,12 +14,49 @@ const errorCode = 0;
 // const errorCode = 4 geeft "Geen druk" in de terminal
 // etc.
 
+const errorCode = 2;
+
+switch (errorCode) {
+    case 0:
+        console.log('Geen watertoevoer');
+        break;
+    case 1:
+        console.log('Temperatuur te laag');
+        break;
+    case 2:
+        console.log('Koffiebonen op');
+        break;
+    case 3:
+        console.log('Afvalbak vol');
+        break;
+    case 4:
+        console.log('Geen druk');
+        break;
+    default:
+        console.log("Er is hiervoor geen waarde opgegeven in de opdracht");
+}
 
 // ==========================================
 // Opdracht 2: schrijf een switch statement die op basis van de volgende variabele een bijbehorende foutmelding in de console logt.
 // ==========================================
 
-const monitorColor = "red";
+const monitorColor = "green";
+
+switch (monitorColor) {
+    case "green":
+        console.log("Hartslag stabiel");
+        break;
+    case "yellow":
+        console.log("Hartslag verhoogd");
+        break;
+
+    case "orange":
+    case "red":
+        console.log("Kritieke hartslag, actie vereist!");
+        break;
+    default:
+        console.log("Hartslag onbekend");
+}
 
 // Deze variabele zal altijd een kleur bevatten. De specifieke kleuren waar een melding bij gemaakt moet worden zijn: "red", "green", "yellow" en "orange".
 // Deze codes zijn gelinkt aan de volgende meldingen:
@@ -40,3 +75,17 @@ const monitorColor = "red";
 // ==========================================
 // [BONUSOPDRACHT] - optioneel: kun je de switch-statement uit opdracht 2 ook opschrijven met een aantal if-statements?
 // ==========================================
+
+const monitorColor1 = "red";
+
+if(monitorColor1 === "green") {
+    console.log("Hartslag stabiel");
+}
+
+if(monitorColor1 === "yellow") {
+    console.log("Hartslag verhoogd");
+}
+
+if(monitorColor1 === "orange" || monitorColor1 === "red") {
+    console.log("Kritieke hartslag, actie vereist!");
+}
